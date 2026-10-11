@@ -1,7 +1,3 @@
-body {
-  background-color: #f2f2f2;
-}
-
 button {
   font: inherit;
 }
@@ -13,15 +9,24 @@ button {
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   padding: 92px 50px 96px;
+  font-size: 18px;
 }
 
 .header__logo {
   display: block;
   width: 148px;
+  height: 105px;
 }
 
 .header__logo-image {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header__menu {
+  display: flex;
+  margin: 0;
 }
 
 .header__links-list {
@@ -36,7 +41,6 @@ button {
 }
 
 .header__link {
-  font-size: 18px;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -46,7 +50,7 @@ button {
 }
 
 .header__address {
-  max-width: 240px;
+  align-self: center;
   justify-self: end;
 }
 
@@ -57,7 +61,7 @@ button {
   flex-direction: column;
   align-items: flex-start;
   font-style: normal;
-  font-size: 18px;
+  width: 240px;
   line-height: 24px;
 }
 
@@ -68,32 +72,35 @@ button {
 /* Обложка */
 
 .cover {
+  position: relative;
+  height: 760px;
   background-image: url(../images/cover.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 600px;
-  position: relative;
+  box-sizing: border-box;
+  padding: 165px 50px 50px;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  z-index: 0;
-  background-color: rgb(0 0 0 / 0.6);
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cover__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  height: 380px;
   margin: 0;
-  padding: 165px 50px 0;
   color: #fff;
   font-size: 100px;
-  font-weight: bold;
   line-height: 1.15;
   text-transform: uppercase;
-  letter-spacing: 30px;
 }
 
 .aligned-text {
@@ -114,11 +121,13 @@ button {
 
 .cover__description {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px 50px;
+  margin-top: 105px;
+  font-size: 22px;
+  line-height: 28px;
 }
 
 .cover__description-text {
@@ -274,9 +283,10 @@ button {
 .footer {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
-  align-items: center;
-  margin-top: 180px;
-  padding: 0 50px 88px;
+  align-items: start;
+  padding: 0 50px;
+  height: 180px;
+  font-size: 18px;
 }
 
 .footer__address {
@@ -314,7 +324,17 @@ button {
   list-style: none;
 }
 
+.footer__social-list-item {
+  display: block;
+}
+
+.footer__social-link {
+  display: block;
+}
+
 .footer__social-icon {
+  display: block;
   width: 48px;
   height: 48px;
+  object-fit: contain;
 }

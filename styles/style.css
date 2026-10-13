@@ -8,13 +8,14 @@ button {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 50px 96px;
+  margin: 92px 50px 105px 50px;
+  height: 90px;
   font-size: 18px;
 }
 
 .header__logo {
   display: block;
-  width: 148px;
+  width: 130px;
   height: 105px;
 }
 
@@ -62,7 +63,7 @@ button {
   align-items: flex-start;
   font-style: normal;
   width: 240px;
-  line-height: 24px;
+  line-height: 1.35;
 }
 
 .address a {
@@ -134,7 +135,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 105px;
+  margin: 105px 50px 0 50px;
+  padding-bottom: 50px;
   font-size: 22px;
   line-height: 28px;
 }
@@ -152,7 +154,6 @@ button {
   border: 1px solid #fff;
   padding: 12px 32px;
   color: #fff;
-  font-family: inherit;
   font-size: 22px;
   text-transform: uppercase;
   background-color: transparent;
@@ -162,12 +163,15 @@ button {
 /* Лоты */
 
 .lots {
-  margin-top: 180px;
+  margin: 180px 0 0 0;
+  padding: 0 24px;
 }
 
 .lots__heading {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+  margin-left: 40px;
   font-size: 40px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -181,7 +185,8 @@ button {
 }
 
 .lots__card-list-item {
-  width: 334px;
+  flex-grow: 1;
+  max-width: 334px;
   min-height: 596px;
 }
 
@@ -193,6 +198,7 @@ button {
 
 .card {
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -202,25 +208,27 @@ button {
   background-position: center;
 }
 
-.card__title {
+.card__title,
+.card__text {
   position: relative;
   z-index: 2;
+}
+
+.card__title {
   margin: 0;
   color: #fff;
   font-size: 22px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 120%;
   text-transform: uppercase;
   text-decoration: underline;
 }
 
 .card__text {
-  position: relative;
-  z-index: 2;
   margin: 0;
   color: #fff;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 120%;
 }
 
 .card_type_film {
@@ -238,6 +246,7 @@ button {
 .lots__look-more-link {
   display: inline-block;
   margin-top: 30px;
+  margin-left: 40px;
   font-size: 20px;
   text-transform: lowercase;
   text-decoration: underline;
@@ -249,8 +258,8 @@ button {
 .about {
   display: grid;
   grid-template-columns: 334px 1fr;
-  gap: 25px;
-  margin-top: 120px;
+  column-gap: 24px;
+  margin: 155px 22px 184px 50px;
 }
 
 .about__logo {
@@ -269,7 +278,7 @@ button {
 }
 
 .about__title {
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   font-size: 40px;
   text-transform: uppercase;
 }
@@ -277,31 +286,31 @@ button {
 .about__text {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 25px;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 23px;
 }
 
 /* Подвал */
 
 .footer {
-  display: grid;
-  grid-template-columns: 1fr min-content 1fr;
-  align-items: start;
-  padding: 0 50px;
-  height: 180px;
-  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px 90px 50px;
 }
 
 .footer__address {
   justify-self: start;
 }
 
+.footer__menu {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+}
+
 .footer__menu-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
+  list-style-type: none;
 }
 
 .footer__menu-list-item {
@@ -339,5 +348,4 @@ button {
 .footer__social-icon {
   display: block;
   width: 48px;
-  object-fit: contain;
 }
